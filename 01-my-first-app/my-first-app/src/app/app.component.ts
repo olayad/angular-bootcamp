@@ -9,12 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   userName = "";
   hideNote = false;
+  log = [];
 
-  updateNoteStatus(){
-    if (this.hideNote){
-      this.hideNote = false;
-    } else {
-      this.hideNote = true;
-    }
+  updateNoteStatus(event){
+    this.hideNote = !this.hideNote;
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date())
+    // console.log("timestamp:", event.timeStamp);
   }
 }

@@ -12,16 +12,26 @@
       </button>
       <p>userName: {{ userName  }}</p>
 
+
       <hr>
       <h2> Assignment - Directives</h2>
       <button
         class="btn btn-primary"
-        (click)="updateNoteStatus()">Display Details</button>
-      <p *ngIf="!hideNote">Secret password = tuna</p>
+        (click)="updateNoteStatus($event)">Display Details</button>
+      <p
+        *ngIf="!hideNote">
+        Secret password = tuna
+      </p>
       <p> hideNote: {{hideNote}}</p>
+      <div
+        *ngFor="let logItem of log; let i = index"
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text':  i >= 4}"
+          ><p> {{logItem}} </p>
+      </div>
+
 
       <hr>
-
       <app-servers></app-servers>
 
 <!--        <div app-servers></div>-->
