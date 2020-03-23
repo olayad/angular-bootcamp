@@ -13,6 +13,14 @@
       <p>userName: {{ userName  }}</p>
 
       <hr>
+      <h2> Assignment - Directives</h2>
+      <button
+        class="btn btn-primary"
+        (click)="updateNoteStatus()">Display Details</button>
+      <p *ngIf="!hideNote">Secret password = tuna</p>
+      <p> hideNote: {{hideNote}}</p>
+
+      <hr>
 
       <app-servers></app-servers>
 

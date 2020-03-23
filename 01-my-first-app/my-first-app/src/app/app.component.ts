@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   userName = "";
+  hideNote = false;
+
+  updateNoteStatus(){
+    if (this.hideNote){
+      this.hideNote = false;
+    } else {
+      this.hideNote = true;
+    }
+  }
 }
