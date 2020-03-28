@@ -1,6 +1,11 @@
-<ng-container *ngFor="let i of [].constructor(gameCtr), let x = index">
-  <p
-    *ngIf="x % 2 == 0"
-    >EVEN - {{ x }}
-  </p>
-</ng-container>
+<!--<ng-container *ngFor="let i of [].constructor(gameCtr), let x = index">-->
+<!--  <p-->
+<!--    *ngIf="x % 2 == 0"-->
+<!--    >EVEN - {{ x }}-->
+<!--  </p>-->
+<!--</ng-container>-->
+
+<p
+  *ngFor="let num of nums">
+  EVEN - {{ num }}
+</p>

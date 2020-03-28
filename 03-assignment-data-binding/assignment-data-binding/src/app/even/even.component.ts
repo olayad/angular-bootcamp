@@ -6,7 +6,7 @@ import {AfterViewChecked, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./even.component.css']
 })
 export class EvenComponent implements OnInit, AfterViewChecked {
-  @Input() gameCtr: number;
+  @Input() nums: number[];
 
   constructor() { }
 
