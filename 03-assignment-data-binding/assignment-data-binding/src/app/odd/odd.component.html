@@ -1,1 +1,6 @@
-<h1>(odd.component)</h1>
+<ng-container *ngFor="let i of [].constructor(gameCtr), let x = index">
+  <p
+    *ngIf="x % 2 == 1"
+    >ODD - {{ x }}
+  </p>
+</ng-container>

@@ -2,11 +2,30 @@
 
 <div class="container">
   <div class="row">
-    <button class="btn btn-primary mr-3">Start</button>
-    <button class="btn btn-danger">Stop</button>
+    <button
+      class="btn btn-primary mr-3"
+      (click)="onClickStart()"
+    >Start</button>
+    <button
+      class="btn btn-danger"
+      (click)="onClickStop()"
+    >Stop</button>
   </div>
 </div>
 
-<app-even></app-even>
-<app-odd></app-odd>
+<div class="row mx-auto">
+  <div class="col-xs-5">
+    <app-even
+      [gameCtr]="gameCtr"
+    ></app-even>
+  </div>
+  <div class="col-xs-2"></div>
+  <div class="col-xs-5">
+    <app-odd
+      [gameCtr]="gameCtr"
+    ></app-odd>
+  </div>
+</div>
+
+
 

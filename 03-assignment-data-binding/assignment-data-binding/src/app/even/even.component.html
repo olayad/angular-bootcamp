@@ -1,1 +1,6 @@
-<h1>(even.component)</h1>
+<ng-container *ngFor="let i of [].constructor(gameCtr), let x = index">
+  <p
+    *ngIf="x % 2 == 0"
+    >EVEN - {{ x }}
+  </p>
+</ng-container>
