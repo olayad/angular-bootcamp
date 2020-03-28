@@ -6,17 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  gameCtr: number;
+  firedNum: number;
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
 
   onIntervalFired(gameCtr){
     console.log("app.component gameCtr: ", gameCtr);
-    this.gameCtr = gameCtr;
-    if (this.gameCtr % 2 === 0){
-      this.evenNumbers.push(this.gameCtr);
+    this.firedNum = gameCtr;
+    if (this.firedNum % 2 === 0){
+      this.evenNumbers.push(this.firedNum);
     } else{
-      this.oddNumbers.push(this.gameCtr);
+      this.oddNumbers.push(this.firedNum);
     }
+    console.log('oddNumbers: ', this.oddNumbers);
+    console.log('evenNumbers: ', this.evenNumbers)
+
   }
 }

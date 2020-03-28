@@ -6,7 +6,7 @@ import {AfterViewChecked, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./odd.component.css']
 })
 export class OddComponent implements OnInit, AfterViewChecked {
-  // @Input() gameCtr: number;
+  @Input() num: number;
 
   constructor() { }
 
@@ -14,6 +14,5 @@ export class OddComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    // console.log('(odd)', this.gameCtr);
   }
 }
