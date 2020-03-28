@@ -1,7 +1,23 @@
 <div class="container">
   <h1>Even/Odd Game</h1>
 
-  <app-game-control></app-game-control>
+  <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
 </div>
 
+
+<div class="row pt-5 d-flex justify-content-around">
+  <div class="col-xs-4"></div>
+  <div class="col-xs-2">
+    <app-even
+      [gameCtr]="gameCtr"
+    ></app-even>
+  </div>
+  <div class="col-xs-2"></div>
+  <div class="col-xs-1">
+<!--    <app-odd-->
+<!--      [gameCtr]="gameCtr"-->
+<!--    ></app-odd>-->
+  </div>
+  <div class="col-xs-4"></div>
+</div>
 

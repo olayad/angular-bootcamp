@@ -14,7 +14,7 @@ export class EvenComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    console.log('(even)', this.gameCtr);
+    // console.log('(even)', this.gameCtr);
 
   }
 }

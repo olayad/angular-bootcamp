@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment-data-binding';
+  gameCtr: number;
+
+  onIntervalFired(gameCtr){
+    console.log("app.component gameCtr: ", gameCtr);
+    this.gameCtr = gameCtr;
+  }
 }
