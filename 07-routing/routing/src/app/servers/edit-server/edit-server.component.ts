@@ -22,8 +22,6 @@ export class EditServerComponent implements OnInit {
       .subscribe(
         (queryParams : Params) => {
           this.allowEdit = queryParams['allowEdit'] === '1' ? true : false;
-          console.log('(edit) queryParams ', queryParams);
-          console.log('(edit) allowEdit: ', this.allowEdit, queryParams['allowEdit'])
         }
       );
     const id = this.route.snapshot.params['id'];
