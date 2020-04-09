@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {interval, Observable, Subscription} from 'rxjs';
+import { map } from 'rxjs/operators';
 import {objectLiteralExpression} from "codelyzer/util/astQuery";
 
 @Component({
@@ -30,19 +31,27 @@ export class HomeComponent implements OnInit, OnDestroy {
         count++;
       }, 1000)
     });
-    this.secondObsSubscription =  customIntervalObservable.subscribe(data => {
+    // this.secondObsSubscription =  customIntervalObservable.subscribe(data => {
+    //   console.log(data);
+    // }, error => {
+    //   alert(error.message);
+    // }, () => {
+    //   console.log('Completed!');
+    // });
+
+    this.secondObsSubscription = customIntervalObservable.pipe(map( (data: number) => {
+      return 'Round: ' + (data + 1);
+    })).subscribe(data => {
       console.log(data);
     }, error => {
       alert(error.message);
     }, () => {
       console.log('Completed!');
-    })
+    });
   }
 
   ngOnDestroy(): void {
     // this.firstObsSubscription.unsubscribe();
     this.secondObsSubscription.unsubscribe();
-
   }
-
 }
