@@ -14,7 +14,7 @@ import {FormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

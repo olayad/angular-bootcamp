@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {NgForm} from "@angular/forms";
+
 
 @Component({
   selector: 'app-root',
@@ -6,13 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dropdownSelection: string = "Select an option";
-  stri: string = '';
-  title = 'forms-assignment';
+  subscriptions = ['Basic', 'Advanced', 'Pro'];
+  @ViewChild('signupForm') sgnForm: NgForm;
 
-  onSelectedValue(selection){
-    this.dropdownSelection = selection.target.innerText;
+  selectedSubscription = 'Advanced';
 
+  onSubmit(){
+    console.log(`Form has been submitted!`);
+    console.log(this.sgnForm.value);
   }
 
 }
